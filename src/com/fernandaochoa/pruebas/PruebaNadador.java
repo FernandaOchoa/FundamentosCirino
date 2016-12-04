@@ -121,7 +121,6 @@ public class PruebaNadador {
         PruebaNadador n = new PruebaNadador();
         String resp = "s";
 
-
         n.inicio();
         while (resp.equals("s") || resp.equals("S")) {
             n.datos(n.nadador);
