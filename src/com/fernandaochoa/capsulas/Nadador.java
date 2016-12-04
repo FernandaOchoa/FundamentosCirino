@@ -1,5 +1,7 @@
 package com.fernandaochoa.capsulas;
 
+import com.fernandaochoa.pruebas.PruebaNadador;
+
 /**
  * Created by monsh on 03/12/2016.
  */
@@ -14,7 +16,7 @@ public class Nadador {
     }
 
     public boolean setNombre(String nombre) {
-        if (nombre.isEmpty()) {
+        if (!nombre.isEmpty()) {
             this.nombre = nombre;
             return true;
         } else
@@ -26,11 +28,11 @@ public class Nadador {
     }
 
     public boolean setPais(String pais) {
-        if (pais.isEmpty()) {
+        if (!pais.isEmpty()) {
             this.pais = pais;
             return true;
         } else
-            return true;
+            return false;
     }
 
     public String getResp() {
@@ -38,7 +40,7 @@ public class Nadador {
     }
 
     public boolean setResp(String resp) {
-        if (resp.isEmpty()) {
+        if (!resp.isEmpty()) {
             this.resp = resp;
             return true;
         } else
@@ -117,4 +119,16 @@ public class Nadador {
         } else
             return false;
     }
+
+    public String printStates() {
+        return "Nombre: " + nombre + "\n" +
+                "Pais: " + pais + "\n" +
+                "Medallas en Sidney: " + sidney + "\n" +
+                "Medallas en Atenas: " + atenas + "\n" +
+                "Medallas en Beijing: " + beijing + "\n" +
+                "Medallas en Londres: " + londres + "\n" +
+                "Medallas en Rio: " + rio;
+
+    }
+
 }
