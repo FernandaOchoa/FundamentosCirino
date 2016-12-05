@@ -89,6 +89,7 @@ public class PruebaFormulaGeneral {
     void resultados() {
         p.out("La solucion para x1 es: " + x1 + "\n");
         p.out("La solucion para x2 es: " + x2 + "\n");
+        p.ofoto("general.jpg");
     }
 
     //Navegacion
