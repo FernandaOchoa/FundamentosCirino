@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39fcaa50-09ea-4354-be40-d1628120e389" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hola/com/fernandaochoa/capsulas/Aumento.class" afterPath="$PROJECT_DIR$/out/production/Hola/com/fernandaochoa/capsulas/Aumento.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hola/com/fernandaochoa/pruebas/PruebaNumeros.class" afterPath="$PROJECT_DIR$/out/production/Hola/com/fernandaochoa/pruebas/PruebaNumeros.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaHipotenusa.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Aumento.java" afterPath="$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Aumento.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Hipotenusa.java" afterPath="$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Hipotenusa.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java" afterPath="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,48 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PruebaNadador.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaNadador.java">
+      <file leaf-file-name="Hipotenusa.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Hipotenusa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="61" column="35" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="61" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Aumento.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Aumento.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="22" />
-              <folding>
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PruebaCohete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaCohete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PruebaAumento.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PruebaAumento.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+            <state relative-caret-position="563">
+              <caret line="59" column="4" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="59" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,6 +51,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
               <caret line="97" column="9" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="97" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PruebaHipotenusa.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaHipotenusa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="85" column="64" lean-forward="false" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,6 +109,8 @@
         <option value="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaBono.java" />
         <option value="$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Aumento.java" />
         <option value="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java" />
+        <option value="$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Hipotenusa.java" />
+        <option value="$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaHipotenusa.java" />
       </list>
     </option>
   </component>
@@ -258,27 +244,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Ejercicio18" />
   </component>
-  <component name="RunManager" selected="Application.PruebaAumento">
-    <configuration default="false" name="PruebaNadador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.fernandaochoa.pruebas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.fernandaochoa.pruebas.PruebaNadador" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Hola" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.PruebaHipotenusa">
     <configuration default="false" name="PruebaCohete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -347,6 +313,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.fernandaochoa.pruebas.PruebaAumento" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Hola" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PruebaHipotenusa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fernandaochoa.pruebas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.fernandaochoa.pruebas.PruebaHipotenusa" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -486,19 +472,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.PruebaNadador" />
-      <item index="1" class="java.lang.String" itemvalue="Application.PruebaCohete" />
-      <item index="2" class="java.lang.String" itemvalue="Application.PruebaTemperatura" />
-      <item index="3" class="java.lang.String" itemvalue="Application.PruebaNumeros" />
-      <item index="4" class="java.lang.String" itemvalue="Application.PruebaAumento" />
+      <item index="0" class="java.lang.String" itemvalue="Application.PruebaCohete" />
+      <item index="1" class="java.lang.String" itemvalue="Application.PruebaTemperatura" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PruebaNumeros" />
+      <item index="3" class="java.lang.String" itemvalue="Application.PruebaAumento" />
+      <item index="4" class="java.lang.String" itemvalue="Application.PruebaHipotenusa" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.PruebaAumento" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PruebaNumeros" />
-        <item index="2" class="java.lang.String" itemvalue="Application.PruebaTemperatura" />
-        <item index="3" class="java.lang.String" itemvalue="Application.PruebaCohete" />
-        <item index="4" class="java.lang.String" itemvalue="Application.PruebaNadador" />
+        <item index="0" class="java.lang.String" itemvalue="Application.PruebaHipotenusa" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PruebaAumento" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PruebaNumeros" />
+        <item index="3" class="java.lang.String" itemvalue="Application.PruebaTemperatura" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PruebaCohete" />
       </list>
     </recent_temporary>
   </component>
@@ -516,7 +502,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -644,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Hipotenusa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/FormulaGeneral.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -739,6 +717,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Aumento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaNadador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -749,14 +738,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Aumento.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="22" />
+        <state relative-caret-position="563">
+          <caret line="59" column="4" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="59" selection-end-column="4" />
           <folding>
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/capsulas/Hipotenusa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,10 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaAumento.java">
+    <entry file="file://$PROJECT_DIR$/src/com/fernandaochoa/pruebas/PruebaHipotenusa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        <state relative-caret-position="332">
+          <caret line="85" column="64" lean-forward="false" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

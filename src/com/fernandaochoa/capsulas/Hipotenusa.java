@@ -23,7 +23,7 @@ public class Hipotenusa {
             return false;
     }
 
-    private boolean setAdyacente(float adyacente) {
+    public boolean setAdyacente(float adyacente) {
         if (adyacente > 0) {
             this.adyacente = adyacente;
             return true;
