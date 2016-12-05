@@ -26,4 +26,8 @@ public class Aumento {
             return true;
         } else return false;
     }
+
+    public int getSueldo() {
+        return sueldo;
+    }
 }
