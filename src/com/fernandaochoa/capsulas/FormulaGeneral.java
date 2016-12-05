@@ -20,7 +20,7 @@ public class FormulaGeneral {
     }
 
     public boolean setA(int a) {
-        if (a > 0) {
+        if (a < 0) {
             this.a = a;
             return true;
         } else
