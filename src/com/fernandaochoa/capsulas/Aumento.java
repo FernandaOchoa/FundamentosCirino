@@ -10,7 +10,7 @@ public class Aumento {
     private int sueldo;
 
     public boolean setNombre (String nombre){
-        if (nombre == null){
+        if (!nombre.isEmpty()){
             this.nombre = nombre;
             return  true;
         } else

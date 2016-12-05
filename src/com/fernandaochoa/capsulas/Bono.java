@@ -22,7 +22,7 @@ public class Bono {
     }
 
     public boolean setNombre(String nombre) {
-        if (nombre.isEmpty()) {
+        if (!nombre.isEmpty()) {
             this.nombre = nombre;
             return true;
         } else

@@ -119,6 +119,8 @@ public class PruebaNadador {
 
     public static void main(String[] args) throws IOException {
         PruebaNadador n = new PruebaNadador();
+        Pizarra p = new Pizarra();
+        Dialog d = new Dialog();
         String resp = "s";
 
         n.inicio();
@@ -126,12 +128,10 @@ public class PruebaNadador {
             n.datos(n.nadador);
             n.calculos();
             n.resultados();
-            Pizarra p = new Pizarra();
-            Dialog d = new Dialog();
-            p.setVisible(true);
+            //p.setVisible(true);
             resp = d.readString("¿Desea ver otro nadador? s/n");
             if (resp.equals("n") || resp.equals("N")) {
-                n.resultados();
+                System.exit(0);
             }
             System.in.skip(2);
         }

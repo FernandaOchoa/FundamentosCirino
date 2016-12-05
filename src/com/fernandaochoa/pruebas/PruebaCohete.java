@@ -7,9 +7,17 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/**
- * Created by monsh on 04/12/2016.
- */
+/*NombreDelArchivo.java
+  Instituto Tecnológico de León
+  Ingeniería en Sistemas Computacionales
+  Fundamentos de Programación.
+  Días y horario del curso
+  Alumno (a): Ramírez Ochoa Fernanda Monserrat
+  Foto Digital del alumno (a)
+  Tarea #: _______
+  Fecha de entrega pactada:_________
+  Fecha de entrega actual:__________
+*/
 public class PruebaCohete {
     //Instancia de mi pojo
     Cohete cohete = new Cohete();
@@ -86,7 +94,7 @@ public class PruebaCohete {
     void resultados() {
         Pizarra p = new Pizarra();
         p.out("Programa del Cohete\n"); //change
-        p.setVisible(true);
+       p.setVisible(true);
 
         p.out("El tiempo de vuelo fue \n" +
                 "Dias: " + dia +
@@ -99,18 +107,17 @@ public class PruebaCohete {
 
     public static void main(String[] args) throws IOException {
         PruebaCohete c = new PruebaCohete();
+        Pizarra p = new Pizarra();
+        Dialog d = new Dialog();
         String resp = "s";
 
         c.inicio();
         while (resp.equals("s") || resp.equals("S")) {
             c.datos(c.cohete);
             c.resultados();
-            Pizarra p = new Pizarra();
-            Dialog d = new Dialog();
-            p.setVisible(true);
             resp = d.readString("¿Desea ver otro vuelo? s/n");
             if (resp.equals("n") || resp.equals("N")) {
-                c.resultados();
+                System.exit(0);
             }
             System.in.skip(2);
         }
