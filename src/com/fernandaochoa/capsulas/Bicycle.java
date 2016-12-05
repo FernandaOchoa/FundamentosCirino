@@ -44,4 +44,10 @@ public class Bicycle {
         } else
             return false;
     }
+
+    public String printStates(){
+        return "piñones "+piñones+"\n"+
+                "rodada "+rodada+"\n"+
+                "velocidad "+velocidad;
+    }
 }
