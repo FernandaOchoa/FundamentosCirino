@@ -5,9 +5,18 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/**
- * Created by monsh on 05/12/2016.
- */
+/*NombreDelArchivo.java
+  Instituto Tecnológico de León
+  Ingeniería en Sistemas Computacionales
+  Fundamentos de Programación.
+  Días y horario del curso
+  Alumno (a): Ramírez Ochoa Fernanda Monserrat
+  Foto Digital del alumno (a)
+  Tarea #: _______
+  Fecha de entrega pactada:_________
+  Fecha de entrega actual:__________
+*/
+
 public class Triangulos {
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
