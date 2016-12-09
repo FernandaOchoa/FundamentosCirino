@@ -16,7 +16,7 @@ import java.io.IOException;
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
-
+//67
 public class AritmeticaConArreglos {
     Dialog d=new Dialog();
     private float primero[]=new float[1000];

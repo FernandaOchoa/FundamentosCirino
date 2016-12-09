@@ -22,7 +22,8 @@ public class PruebaNumeros {
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
 
-    int x1, x2, x3, mayor, cantidad;
+    int x1, x2, x3, mayor;
+    char cantidad;
 
     public void inicio() {
         System.out.println("Programa Mayor de 3 numeros");
@@ -49,13 +50,11 @@ public class PruebaNumeros {
         n = Integer.parseInt(v);
         numeros.setX1(n);
 
-
         p.setVisible(true);
         do v = d.readString("Ingrese el valor del segundo numero:");
         while (!isNum(v));
         n = Integer.parseInt(v);
         numeros.setX2(n);
-
 
         p.setVisible(true);
         do v = d.readString("Ingrese el valor del tercer numero:");
@@ -71,20 +70,20 @@ public class PruebaNumeros {
 
         if ((x1>x2)&(x1 > x3)){
             mayor = x1;
-            cantidad = x1;
+            cantidad = 'a';
         }
         else if ((x2 > x1)&(x2 >x3)){
             mayor = x2;
-            cantidad = x2;
+            cantidad = 'b';
         } else if ((x3 > x1)& (x3>x2)){
             mayor = x3;
-            cantidad = x3;
+            cantidad = 'c';
         }
 
     }
 
     void resultados(){
-        if (x1==x2 & x2 == x3){
+        if (x1==x2 && x2 == x3){
             p.out("Las 3 cantidades son iguales");
         } else if (x1 == x2){
             p.out("\n La cantidad 1 es igual a la cantidad 2 = "+x1);

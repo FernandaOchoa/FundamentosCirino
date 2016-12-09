@@ -1,7 +1,6 @@
 package com.fernandaochoa.pruebas;
 
 import com.fernandaochoa.capsulas.Temperatura;
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
 import cstio.Dialog;
 import cstio.Pizarra;
 

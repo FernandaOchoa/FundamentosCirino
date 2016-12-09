@@ -22,7 +22,6 @@ public class PruebaFormulaGeneral {
 
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
-
     int a, b, c;
     String a1, b2, c3;
     double determinante, x1, x2;
@@ -43,7 +42,6 @@ public class PruebaFormulaGeneral {
         }
         return false;
     }
-
     //Datos
     void datos(FormulaGeneral formulaGeneral) {
 
@@ -64,7 +62,6 @@ public class PruebaFormulaGeneral {
         while (!isNum(c3));
         c = Integer.parseInt(c3);
         formulaGeneral.setC(c);
-
     }
 
     //Calculos
@@ -81,8 +78,6 @@ public class PruebaFormulaGeneral {
             System.out.println("Valor de discriminante: " + determinante);
             System.out.println("Valor de x1: " + x1);
             System.out.println("Valor de x2: " + x2);
-
-
     }
 
     //Resultados
@@ -95,7 +90,6 @@ public class PruebaFormulaGeneral {
     //Navegacion
     public static void main(String[] args) throws IOException {
         PruebaFormulaGeneral pfg = new PruebaFormulaGeneral();
-
         Pizarra p = new Pizarra();
         Dialog d = new Dialog();
         String resp = "s";

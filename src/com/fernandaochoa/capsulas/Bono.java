@@ -21,11 +21,9 @@ public class Bono {
     public int getAusencias() {
         return ausencias;
     }
-
     public int getHorasExtra() {
         return horasExtra;
     }
-
     public String getNombre() {
         return nombre;
     }

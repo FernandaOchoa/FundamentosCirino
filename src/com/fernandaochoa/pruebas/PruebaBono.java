@@ -61,8 +61,6 @@ public class PruebaBono {
         while (!isNum(a));
         ausencias = Integer.parseInt(a);
         bono.setAusencias(ausencias);
-
-
     }
 
     void calculos() {
@@ -99,9 +97,10 @@ public class PruebaBono {
     }
 
     void resultados() {
-        p.out("El empleado " + bono.getNombre() + "\ntrabajo " + bono.getHorasExtra() + " horas extras " + "\ncon un total de " +
-                bono.getAusencias() + " ausencia (s) y recibio un bono de " + bon+"\n");
-
+        p.out("El empleado " + bono.getNombre());
+        p.out( "\ntrabajo " + bono.getHorasExtra()+" horas extras " );
+        p.out("\ncon un total de "+bono.getAusencias() + " ausencia (s)");
+        p.out("y recibio un bono de " + bon+"\n");
         p.out("La empresa ha pagado " + bonos + " bonos de los cuales: \n" + c1 + " es de $500 \n" + c2 +
                 " es de $400 \n" + c3 + " es de $300 \n" + c4 + " es de $200 \n" + c5 + " es de $100 \n");
         p.ofoto("grinch.jpg");

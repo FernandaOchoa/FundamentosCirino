@@ -73,7 +73,6 @@ public class PruebaHipotenusa {
 
     public static void main(String[] args) throws IOException {
         PruebaHipotenusa ph = new PruebaHipotenusa();
-
         Pizarra p = new Pizarra();
         Dialog d = new Dialog();
         String resp = "s";
@@ -84,9 +83,8 @@ public class PruebaHipotenusa {
             ph.calculos();
             ph.resultados();
             resp = d.readString("¿Desea calcular otra hipotenusa? s/n");
-            if (resp.equals("n") || resp.equals("N")) {
+            if (resp.equals("n") || resp.equals("N"))
                 System.exit(0);
-            }
             System.in.skip(2);
         }
     }

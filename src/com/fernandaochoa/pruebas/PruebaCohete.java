@@ -1,7 +1,6 @@
 package com.fernandaochoa.pruebas;
 
 import com.fernandaochoa.capsulas.Cohete;
-import com.fernandaochoa.capsulas.Nadador;
 import cstio.Dialog;
 import cstio.Pizarra;
 

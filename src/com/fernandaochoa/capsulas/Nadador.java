@@ -16,9 +16,9 @@ import com.fernandaochoa.pruebas.PruebaNadador;
 
 //Ejercicio 20
 public class Nadador {
-    private String nombre, pais, resp;
+    private String nombre, pais;
     private int atenas, beijing, londres, rio, sidney;
-    private float promedio;
+
 
     public String getNombre() {
         return nombre;
@@ -44,17 +44,6 @@ public class Nadador {
             return false;
     }
 
-    public String getResp() {
-        return resp;
-    }
-
-    public boolean setResp(String resp) {
-        if (!resp.isEmpty()) {
-            this.resp = resp;
-            return true;
-        } else
-            return false;
-    }
 
     public int getAtenas() {
         return atenas;
@@ -112,18 +101,6 @@ public class Nadador {
     public boolean setSidney(int sidney) {
         if (sidney > 0) {
             this.sidney = sidney;
-            return true;
-        } else
-            return false;
-    }
-
-    public float getPromedio() {
-        return promedio;
-    }
-
-    public boolean setPromedio(float promedio) {
-        if (promedio > 0) {
-            this.promedio = promedio;
             return true;
         } else
             return false;

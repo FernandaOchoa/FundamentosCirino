@@ -17,13 +17,13 @@ import java.io.IOException;
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
-
+//62
 public class OperacionesAritmeticas {
     Limites limite = new Limites();
     Pizarra x = new Pizarra();
 
     public void inicio() {
-        System.out.println("Para calcular limites");
+        System.out.println("Para realizar operaciones aritmeticas");
     }
 
     int i = 0;
