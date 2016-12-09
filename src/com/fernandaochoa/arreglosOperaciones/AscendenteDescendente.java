@@ -5,19 +5,20 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*AscendenteDescendente.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Tarea #: __8
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
 public class AscendenteDescendente {
+
     Dialog d = new Dialog();
     int datos[] = new int[1000], control, opc;
     int ascendente[] = new int[1000];
@@ -39,11 +40,9 @@ public class AscendenteDescendente {
     }
 
     public void datos() {
-
         String v;
         int i = 0, numero = 0;
         boolean bandera = true;
-
 
         while (numero != -1) {
             do v = d.readString("Ingresa un valor para el arreglo\n"
@@ -54,11 +53,17 @@ public class AscendenteDescendente {
             i++;
             control = i;
         }
+        //hacer un metodo menu para esto
+        //cada metodo debe realizar una sola accion
+        menu();
+    }
 
-        v = d.readString("De que manera quieres ordenarlos?\n"
+    public void menu() {
+        String m;
+        m = d.readString("De que manera quieres ordenarlos?\n"
                 + "1)Ascendente\n"
                 + "2)Descendente");
-        opc = Integer.parseInt(v);
+        opc = Integer.parseInt(m);
     }
 
     public void rellenar() {
@@ -71,6 +76,40 @@ public class AscendenteDescendente {
 
     }
 
+    public void ordenDescendente() {
+        for (int i = 0; i < descendente.length; i++) {
+            int max = i;
+
+            //buscar el mayor
+            for (int j = i + 1; j < descendente.length; j++) {
+                if (descendente[j] > descendente[max])
+                    max = j;
+            }
+            if (i != max) {
+                int aux = descendente[i];
+                descendente[i] = descendente[max];
+                descendente[max] = aux;
+            }
+        }
+    }
+
+    public void ordenAscendente() {
+        for (int i = 0; i < ascendente.length - 1; i++) {
+            int min = i;
+            //Se busca el menor numero
+            for (int j = i + 1; j < ascendente.length; j++) {
+                if (ascendente[j] < ascendente[min]) {
+                    min = j;
+                }
+            }
+            if (i != min) {
+                int aux = ascendente[i];
+                ascendente[i] = ascendente[min];
+                ascendente[min] = aux;
+            }
+        }
+    }
+
     public void ver() {
         for (int i = 0; i < datos.length; i++) {
             System.out.print(datos[i]);
@@ -80,39 +119,14 @@ public class AscendenteDescendente {
     public void calculos() {
         switch (opc) {
             case 1:
-                for (int i = 0; i < ascendente.length - 1; i++) {
-                    int min = i;
-                    //Se busca el menor numero
-                    for (int j = i + 1; j < ascendente.length; j++) {
-                        if (ascendente[j] < ascendente[min]) {
-                            min = j;
-                        }
-                    }
-                    if (i != min) {
-                        int aux = ascendente[i];
-                        ascendente[i] = ascendente[min];
-                        ascendente[min] = aux;
-                    }
-                }
+                ordenAscendente();
                 break;
             case 2:
-                for (int i = 0; i < descendente.length; i++) {
-                    int max = i;
-
-                    //buscar el mayor
-                    for (int j = i + 1; j < descendente.length; j++) {
-                        if (descendente[j] > descendente[max])
-                            max = j;
-                    }
-                    if (i != max) {
-                        int aux = descendente[i];
-                        descendente[i] = descendente[max];
-                        descendente[max] = aux;
-                    }
-                }
+                ordenDescendente();
                 break;
         }
     }
+
     public void resultados() {
         Pizarra p = new Pizarra();
         p.out("Bienvenido al programa de ordenamiento de arreglos\n");
@@ -148,6 +162,7 @@ public class AscendenteDescendente {
         }
 
     }
+
     public static void main(String[] args) throws IOException {
         AscendenteDescendente orden = new AscendenteDescendente();
         char resp = 's';
@@ -164,5 +179,4 @@ public class AscendenteDescendente {
             System.in.skip(2);
         }
     }
-
 }

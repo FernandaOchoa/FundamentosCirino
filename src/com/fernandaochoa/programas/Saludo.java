@@ -1,5 +1,6 @@
 package com.fernandaochoa.programas;
 
+import cstio.Dialog;
 import cstio.Pizarra;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
@@ -24,7 +25,16 @@ import java.util.Date;
 
 public class Saludo {
 
-    public static void main(String[] args) throws IOException {
+    public void inicio(){
+        System.out.println("Programa que realiza un saludo del dia dependiendo de la hora de sistema");
+    }
+    public void datos(){
+        System.out.println("Son datos del sistema");
+    }
+    public void calculos(){
+        System.out.println("No hay calculos");
+    }
+    public void resultados() throws IOException {
         Pizarra p = new Pizarra();
         p.setVisible(true);
 
@@ -36,29 +46,51 @@ public class Saludo {
         int minutos = (cal.get(Calendar.MINUTE));
         int segundos = (cal.get(Calendar.SECOND));
 
+        InputStream inputStream = new FileInputStream("hola.wav");
+        AudioStream audioStream = new AudioStream(inputStream);
+
         InputStream in = new FileInputStream("buenosdias.wav");
         AudioStream as = new AudioStream(in);
 
+
         InputStream in2 = new FileInputStream("buenastardes.wav");
-        AudioStream as2 = new AudioStream(in);
+        AudioStream as2 = new AudioStream(in2);
 
-        InputStream in3 = new FileInputStream("buenasnoches.wav");
-        AudioStream as3 = new AudioStream(in);
+        InputStream in3 = new FileInputStream("hola.wav");
+        AudioStream as3 = new AudioStream(in3);
 
-        //AudioPlayer.player.stop(as);
 
         p.out("Hora: " + hora + "\nminutos: " + minutos + "\nsegundos: " + segundos);
 
-        if (hora < 12) {
-            p.out("\nBuenos dias");
+        if (hora >= 0 && hora < 12) {
             AudioPlayer.player.start(as);
-        } else if ((hora >= 12) && (hora < 19 && minutos <= 30)) {
-            p.out("\nBuenas Tardes");
+            p.out("\nBuenos dias");
+
+        } else if ((hora >= 12) && (hora <= 19 && minutos <= 30)) {
             AudioPlayer.player.start(as2);
-        } else if (hora > 19 && minutos > 30) {
-            p.out("\nBuenas Noches");
+            p.out("\nBuenas Tardes");
+        } else if (hora >= 20 && hora < 24) {
             AudioPlayer.player.start(as3);
+            p.out("\nBuenas Noches");
+
         }
+
+    }
+
+    public static void main(String[] args) throws IOException {
+        Saludo s = new Saludo();
+        String resp="s";
+
+        s.inicio();
+        while (resp.equals("s") || resp.equals("S")) {
+            s.datos();
+            s.calculos();
+            s.resultados();
+            Pizarra x = new Pizarra();
+            Dialog d = new Dialog();
+            resp = d.readString("¿Desea saludar de nuevo? s/n");
+            System.in.skip(2);
+        }
+
     }
 }
-

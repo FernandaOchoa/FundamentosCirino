@@ -6,7 +6,7 @@ package com.fernandaochoa.capsulas;
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Tarea #: __6_
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */

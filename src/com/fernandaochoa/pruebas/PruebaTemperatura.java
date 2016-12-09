@@ -14,7 +14,7 @@ import java.io.IOException;
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Tarea #: ___6____
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
