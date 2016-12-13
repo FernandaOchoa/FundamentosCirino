@@ -2,34 +2,30 @@ package com.fernandaochoa.programas;
 
 import cstio.Dialog;
 import cstio.Pizarra;
-
 import java.io.IOException;
-
 import static java.lang.Math.pow;
 
-/*NombreDelArchivo.java
+/*PosibilidadLanzamiento.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #:51
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
-
 public class ProbabilidadLanzamiento {
     Pizarra p = new Pizarra();
-
-    public void inicio() {
-        System.out.println("Para calcular la probabiliad al lanzar una moneda");
-    }
-
     int[] monedas = {1, 2, 3, 4, 5};
     int[] aguila = {0, 1, 2, 3, 4, 5};
 
     double valor, promedio;
+
+    public void inicio() {
+        System.out.println("Para calcular la probabiliad al lanzar una moneda");
+    }
 
     boolean isNum(String cad) {
         Dialog d = new Dialog();
@@ -42,21 +38,9 @@ public class ProbabilidadLanzamiento {
         return false;
     }
 
-    public void datos() {
-        Dialog d = new Dialog();
-
-
-    }
-
-    public void calculos() {
-
-    }
-
     void resultados() {
-
         p.setVisible(true);
         for (int y = 0; y <= aguila.length; y++) {
-
             for (int i = 1; i <= monedas.length; i++) {
                 if (valor == 0)
                     valor = 1;
@@ -69,7 +53,6 @@ public class ProbabilidadLanzamiento {
                 p.out("monedas la probabilidad de obtener " + y + " ");
                 p.out("aguilas es " + promedio + "\n");
             }
-
         }
         p.ofoto("moned.jpg");
     }
@@ -78,11 +61,8 @@ public class ProbabilidadLanzamiento {
         ProbabilidadLanzamiento probabilidadLanzamiento = new ProbabilidadLanzamiento();
         String resp = "s";
 
-
         probabilidadLanzamiento.inicio();
         while (resp.equals("s") || resp.equals("S")) {
-            probabilidadLanzamiento.datos();
-            probabilidadLanzamiento.calculos();
             probabilidadLanzamiento.resultados();
             Pizarra x = new Pizarra();
             Dialog d = new Dialog();
@@ -90,5 +70,4 @@ public class ProbabilidadLanzamiento {
             System.in.skip(2);
         }
     }
-
 }

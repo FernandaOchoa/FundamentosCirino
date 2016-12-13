@@ -4,14 +4,15 @@ import cstio.Dialog;
 import cstio.Pizarra;
 
 import java.io.IOException;
-/*NombreDelArchivo.java
+
+/*ParesImpares.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #42
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -19,7 +20,6 @@ import java.io.IOException;
 public class ParesImpares {
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
-
     int n;
     String num;
 
@@ -40,45 +40,38 @@ public class ParesImpares {
     }
 
     public void datos() {
-
         p.setVisible(true);
         do num = d.readString("Ingrese el valor del n:");
         while (!isNum(num));
         n = Integer.parseInt(num);
-
     }
 
     public void calculos() {
-        p.out("No hay calculos");
+        p.out("No hay resultadosLados");
     }
 
     public void resultados() {
-
         int sumaImpar = 0;
         int sumaPar = 0;
         int x = 0;
 
         if (n % 2 == 0) {
             p.out("\nEl numero es par \n");
-
             for (int i = 0; i <= n; i = i + 2) {
                 x = x + i;
             }
             p.out("\nLa suma de los numeros naturales pares hasta " + n + " es " + x);
         } else {
             p.out("\nEl numero es impar");
-
             for (int i = 1; i <= n; i = i + 2) {
                 x = x + i;
             }
             p.out("\nLa suma de los numeros impares hasta " + n + " es " + x);
         }
-
     }
 
     public static void main(String[] args) throws IOException {
-    ParesImpares paresImpares = new ParesImpares();
-
+        ParesImpares paresImpares = new ParesImpares();
         Pizarra p = new Pizarra();
         Dialog d = new Dialog();
         String resp = "s";
@@ -94,8 +87,5 @@ public class ParesImpares {
             }
             System.in.skip(2);
         }
-
     }
-
 }
-

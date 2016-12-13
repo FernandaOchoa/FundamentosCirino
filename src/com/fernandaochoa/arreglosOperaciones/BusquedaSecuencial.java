@@ -1,12 +1,12 @@
 package com.fernandaochoa.arreglosOperaciones;
-/*NombreDelArchivo.java
+/*BusquedaSecuencial.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 65
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -99,8 +99,6 @@ public class BusquedaSecuencial {
                 encontrado = binaria(ordenado, dato);
                 break;
         }
-
-
     }
 
     public int secuencial(int arreglo[], int d) {
@@ -128,10 +126,9 @@ public class BusquedaSecuencial {
         return -1;
     }
 
-
     public void resultados() {
         Pizarra p = new Pizarra();
-        p.out("Bienvenido al programa de busqueda de datos en arreglos\n");
+        p.out("Bienvenido al programa de busqueda de datosLados en arreglos\n");
         p.setVisible(true);
 
         switch (opc) {
@@ -166,14 +163,9 @@ public class BusquedaSecuencial {
         busqueda.datos();
         busqueda.copiar();
         busqueda.rellenar();
-        //busqueda.ver();
         busqueda.ordenar();
-
         busqueda.calculos();
         busqueda.ver();
         busqueda.resultados();
-
     }
 }
-
-

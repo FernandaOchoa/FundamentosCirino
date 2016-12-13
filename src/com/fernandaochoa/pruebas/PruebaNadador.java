@@ -1,20 +1,19 @@
 package com.fernandaochoa.pruebas;
 
-/*NombreDelArchivo.java
+/*PruebaNadador.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 28
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
 import com.fernandaochoa.capsulas.Nadador;
 import cstio.*;
-
 import java.io.IOException;
 
 public class PruebaNadador {
@@ -24,7 +23,8 @@ public class PruebaNadador {
     double promedio;
 
     public void inicio() {
-        System.out.println("Programa Nadador");
+        System.out.println("Calcular el promedio de medallas");
+        System.out.println("que obtiene un nadador en 5 juegos olimpicos");
     }
 
     boolean isNum(String cad) {
@@ -33,11 +33,10 @@ public class PruebaNadador {
             Double.parseDouble(cad);
             return true;
         } catch (NumberFormatException nfe) {
-            d.display("solo se admiten valores numericos");
+            d.display("Solo se admiten valores numericos");
         }
         return false;
     }
-
 
     public void datos(Nadador nadador) {
         Pizarra x = new Pizarra();
@@ -45,23 +44,19 @@ public class PruebaNadador {
         String v;
         int medalla;
 
-        x.setVisible(true);
         do v = d.readString("Ingrese el Nombre del Nadador:");
         while (v.isEmpty());
         nadador.setNombre(v);
 
-        x.setVisible(true);
         do v = d.readString("Ingrese el Pais del Nadador:");
         while (v.isEmpty());
         nadador.setPais(v);
 
-        x.setVisible(true);
         do v = d.readString("Ingrese las medallas ganadas en Atenas:");
         while (!isNum(v));
         medalla = Integer.parseInt(v);
         nadador.setAtenas(medalla);
 
-        x.setVisible(true);
         do v = d.readString("Ingrese las medallas ganadas en Sidney:");
         while (!isNum(v));
         medalla = Integer.parseInt(v);
@@ -72,20 +67,16 @@ public class PruebaNadador {
         medalla = Integer.parseInt(v);
         nadador.setBeijing(medalla);
 
-        x.setVisible(true);
         do v = d.readString("Ingrese las medallas ganadas en Londres:");
         while (!isNum(v));
         medalla = Integer.parseInt(v);
         nadador.setLondres(medalla);
         x.setVisible(true);
 
-        x.setVisible(true);
         do v = d.readString("Ingrese las medallas ganadas en Rio de Janeiro:");
         while (!isNum(v));
         medalla = Integer.parseInt(v);
         nadador.setRio(medalla);
-
-
     }
 
     public void calculos() {
@@ -101,16 +92,14 @@ public class PruebaNadador {
         this.promedio = total;
 
         System.out.println("El total de medallas ganadas es: " + totalG);
-
     }
 
-
-    void resultados() { //No. 3 Imprimir
+    void resultados() {
         Pizarra p = new Pizarra();
-        p.out("Programa del Nadador Olimpico\n"); //change
+        p.out("Programa del Nadador Olimpico\n");
         p.setVisible(true);
 
-        p.out("\nLos datos del nadador son:\n" + nadador.printStates());
+        p.out("\nLos datosLados del nadador son:\n" + nadador.printStates());
         p.out("\n");
         p.out("\n El total de medallas ganadas es: " + totalM);
         p.out("\n El promedio de medallas ganadas es: " + promedio + "\n");
@@ -128,7 +117,6 @@ public class PruebaNadador {
             n.datos(n.nadador);
             n.calculos();
             n.resultados();
-            //p.setVisible(true);
             resp = d.readString("¿Desea ver otro nadador? s/n");
             if (resp.equals("n") || resp.equals("N")) {
                 System.exit(0);

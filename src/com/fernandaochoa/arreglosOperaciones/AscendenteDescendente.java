@@ -9,14 +9,13 @@ import java.io.IOException;
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: __8
+  Ejercicio #: 63
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
-
 public class AscendenteDescendente {
 
     Dialog d = new Dialog();
@@ -73,7 +72,6 @@ public class AscendenteDescendente {
             ascendente[j] = datos[j];
             descendente[j] = datos[j];
         }
-
     }
 
     public void ordenDescendente() {
@@ -134,7 +132,7 @@ public class AscendenteDescendente {
 
         switch (opc) {
             case 1:
-                p.out("datos ingresados\n");
+                p.out("datosLados ingresados\n");
                 for (int i = 0; i < datos.length; i++) {
                     if (datos[i] != -1)
                         p.out(datos[i] + ", ");
@@ -160,7 +158,6 @@ public class AscendenteDescendente {
                 }
                 break;
         }
-
     }
 
     public static void main(String[] args) throws IOException {
@@ -173,7 +170,7 @@ public class AscendenteDescendente {
             orden.rellenar();
             orden.calculos();
             orden.resultados();
-            String res = orden.d.readString("Hacer otro ordenamiento? s/n");
+            String res = orden.d.readString("¿Hacer otro ordenamiento? s/n");
             res = res.toLowerCase();
             resp = res.charAt(0);
             System.in.skip(2);

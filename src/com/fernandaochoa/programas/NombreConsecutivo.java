@@ -5,14 +5,14 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+ /*NombreConsecutivo.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #41
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -41,17 +41,14 @@ public class NombreConsecutivo {
     }
 
     public void datos() {
-
         nombre = d.readString("Ingresa tu nombre: ");
-
         do numero = d.readString("Ingrese el valor del n:");
         while (!isNum(numero));
         n = Integer.parseInt(numero);
-
     }
 
     void calculos() {
-        p.out("No hay calculos");
+        p.out("No hay resultadosLados");
     }
 
     public void resultados() {
@@ -59,7 +56,7 @@ public class NombreConsecutivo {
         if ((0 < n) && (n <= 20)) {
             int i = 1;
             while (i <= n) {
-                p.out("Tu nombre es: " + nombre + "\ny el numero consecutivo es: " + n+1);
+                p.out("Tu nombre es: " + nombre + "\ny el numero consecutivo es: " + n + 1);
                 i++;
             }
         } else {
@@ -85,6 +82,5 @@ public class NombreConsecutivo {
             }
             System.in.skip(2);
         }
-
     }
 }

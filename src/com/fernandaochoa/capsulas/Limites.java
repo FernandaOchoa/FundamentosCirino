@@ -1,18 +1,19 @@
 package com.fernandaochoa.capsulas;
 
-/*NombreDelArchivo.java
+/*Limites.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 47.1
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
 public class Limites {
+
     private String tipo;
     private double valor, valor2;
 
@@ -37,17 +38,16 @@ public class Limites {
     }
 
     public boolean setValor(double valor) {
-        if ((valor > -100) & (valor < 400)) {
+        if (valor > 0) {
             this.valor = valor;
             return true;
         } else return false;
     }
 
     public boolean setValor2(double valor2) {
-        if ((valor > -100) & (valor < 400)) {
+        if (valor > 0) {
             this.valor2 = valor2;
             return true;
         } else return false;
     }
-
 }

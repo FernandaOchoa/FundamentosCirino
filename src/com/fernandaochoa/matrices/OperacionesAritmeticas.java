@@ -20,10 +20,8 @@ import java.io.IOException;
 public class OperacionesAritmeticas {
     Pizarra x = new Pizarra();
 
-
-
     public void inicio() {
-        System.out.println("Para hacer calculos con matrices");
+        System.out.println("Para hacer resultadosLados con matrices");
     }
 
     int [][] matriz1 =new int[25][25];
@@ -43,13 +41,11 @@ public class OperacionesAritmeticas {
         return false;
     }
 
-
     public void datos() {
         Dialog d = new Dialog();
         String aux="";
 
-
-        do aux = d.readString("Ingrese el tipo de operacion que deseas S/R/D (Suma,Resta,Division):");
+        do aux = d.readString("Ingrese el tipo de operacion que deseas S/FigurasCaracteres/D (Suma,Resta,Division):");
         while (aux.isEmpty());
         o = aux;
 
@@ -64,16 +60,10 @@ public class OperacionesAritmeticas {
         for( i=0; i<k; i++){
             for (j=0; j<e; j++){
 
-
                 do aux = d.readString("Ingresa el valor"+i+","+j+" de la primera matriz \n");
                 while (!isNum(aux));
                 a = Integer.parseInt(aux);
                 matriz1[i][j]=a;
-            }
-        }
-
-        for( i=0; i<k; i++){
-            for (j=0; j<e; j++){
 
                 do aux = d.readString("Ingresa el valor"+i+","+j+" de la segunda matriz \n");
                 while (!isNum(aux));
@@ -98,7 +88,7 @@ public class OperacionesAritmeticas {
                 }
 
             case "r":
-            case "R":
+            case "FigurasCaracteres":
 
                 for( i=0; i<k; i++){
                     for (j=0; j<e; j++){
@@ -126,7 +116,7 @@ public class OperacionesAritmeticas {
 
 
 
-    void resultados() { //No. 3 Imprimir
+    void resultados() { //No. 3 resultadosLados
         x.setVisible(true);
         if (h==1){
             x.out("se indetermina\n");

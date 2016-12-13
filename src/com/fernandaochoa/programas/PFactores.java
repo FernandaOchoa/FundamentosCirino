@@ -6,14 +6,14 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*PFactores.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #45
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -21,12 +21,11 @@ import java.io.IOException;
 public class PFactores {
     Factores factores = new Factores();
     Pizarra p = new Pizarra();
+    double   factor = 1;
 
     public void inicio() {
-        System.out.println("Para calcular los factoriales");
+        System.out.println("Para calcular los factores");
     }
-
-    double   factor = 1;
 
     boolean isNum(String cad) {
         Dialog d = new Dialog();
@@ -46,22 +45,14 @@ public class PFactores {
         do aux = d.readString("Ingrese un numero natural (0 a infinito):");
         while (!isNum(aux));
         y.setNumero((Double.parseDouble(aux)));
-
-
     }
-    public void calculos() {
 
-    }
     void resultados() {
-
         p.setVisible(true);
-
         int numero = (int) factores.getNumero();
-
         while(factor <= numero){
-            if(numero % factor == 0){
+            if(numero % factor == 0)
                 p.out(factor + " \nes el factor de " + numero+"\n");
-            }
             factor ++;
         }
         p.ofoto("factor.png");
@@ -71,11 +62,9 @@ public class PFactores {
         PFactores PFactores = new PFactores();
         String resp = "s";
 
-
         PFactores.inicio();
         while (resp.equals("s") || resp.equals("S")) {
             PFactores.datos(PFactores.factores);
-            PFactores.calculos();
             PFactores.resultados();
             Pizarra x = new Pizarra();
             Dialog d = new Dialog();
@@ -83,5 +72,4 @@ public class PFactores {
             System.in.skip(2);
         }
     }
-
 }

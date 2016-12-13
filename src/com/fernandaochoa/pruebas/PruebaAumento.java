@@ -6,14 +6,14 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*PruebaAumento.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 24
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -46,7 +46,6 @@ public class PruebaAumento {
     }
 
     void datos(Aumento aumento) {
-
         p.setVisible(true);
         do nombre = d.readString("Ingrese el Nombre del Empleado:");
         while (nombre.isEmpty());
@@ -77,7 +76,9 @@ public class PruebaAumento {
     }
 
     void resultados() {
-        p.out("El empleado " + aumento.getNombre() + " tenia un sueldo de: " + aumento.getSueldo() + " \n y se le realizo un aumento de " + au + " ahora gana: " + nuevo+"\n");
+        p.out("El empleado " + aumento.getNombre() + " tenia un sueldo de: ");
+        p.out(+ aumento.getSueldo() + " \n y se le realizo un aumento de " + au);
+        p.out(" ahora gana: " + nuevo+"\n");
         p.ofoto("aumento.jpg");
     }
 

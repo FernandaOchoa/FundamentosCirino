@@ -1,19 +1,18 @@
 package com.fernandaochoa.arreglosOperaciones;
 
-
 import cstio.Dialog;
 import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*VarianzaDesviacion.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 64
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -93,7 +92,6 @@ public class VarianzaDesviacion {
         p.out("La desviacion es: " + desviacion + "\n");
     }
 
-
     public static void main(String[] args) throws IOException {
         VarianzaDesviacion estadistica = new VarianzaDesviacion();
         char resp = 's';
@@ -104,13 +102,10 @@ public class VarianzaDesviacion {
             estadistica.rellenar();
             estadistica.calculos();
             estadistica.resultados();
-
-            String res = estadistica.d.readString("Hacer otros calculos? s/n");
+            String res = estadistica.d.readString("Hacer otros resultadosLados? s/n");
             res = res.toLowerCase();
             resp = res.charAt(0);
             System.in.skip(2);
         }
     }
-
 }
-

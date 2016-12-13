@@ -6,20 +6,19 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*PruebaFormulaGeneral.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 34
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 public class PruebaFormulaGeneral {
     FormulaGeneral formulaGeneral = new FormulaGeneral();
-
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
     int a, b, c;

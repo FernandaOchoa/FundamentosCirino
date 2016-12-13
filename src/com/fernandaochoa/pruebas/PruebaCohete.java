@@ -6,21 +6,20 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*PruebaCohete.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 29
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 public class PruebaCohete {
     //Instancia de mi pojo
     Cohete cohete = new Cohete();
-
     int hora, segundo, minuto, tiempo, dia;
 
     //Meta
@@ -49,7 +48,6 @@ public class PruebaCohete {
         int hora, segundo, minuto, tiempo;
 
         //Ingresamos la hora y la asignamos
-        x.setVisible(true);
         do v = d.readString("Ingrese la hora en la que el cohete se fue:");
         while (!isNum(v));
         hora = Integer.parseInt(v);
@@ -57,7 +55,6 @@ public class PruebaCohete {
         this.hora = hora;
 
         //Ingresamos los minutos y los asignamos
-        x.setVisible(true);
         do v = d.readString("Ingrese los minutos en los que el cohete se fue:");
         while (!isNum(v));
         minuto = Integer.parseInt(v);
@@ -65,7 +62,6 @@ public class PruebaCohete {
         this.minuto = minuto;
 
         //Ingresamos los segundos y la asignamos
-        x.setVisible(true);
         do v = d.readString("Ingrese los segundos en los que que el cohete se fue:");
         while (!isNum(v));
         segundo = Integer.parseInt(v);
@@ -73,7 +69,6 @@ public class PruebaCohete {
         this.segundo = segundo;
 
         //Ingresamos la hora y la asignamos
-        x.setVisible(true);
         do v = d.readString("Ingrese los segundos de vuelos:");
         while (!isNum(v));
         tiempo = Integer.parseInt(v);
@@ -122,4 +117,3 @@ public class PruebaCohete {
         }
     }
 }
-

@@ -7,11 +7,11 @@ import cstio.Pizarra;
 import java.io.IOException;
 import java.util.Scanner;
 
-/*NombreDelArchivo.java
+/*PruebaBicicleta.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
   Tarea #: _______
@@ -39,7 +39,7 @@ public class PruebaBicicleta {
         return false;
     }
 
-    void datos (Bicycle p) { //No. 1 introducir datos
+    void datos (Bicycle p) { //No. 1 introducir datosLados
         Pizarra x = new Pizarra();
         Dialog d = new Dialog();
         String v;
@@ -64,7 +64,7 @@ public class PruebaBicicleta {
         p.setVelocidad(numero);
 
     }
-    // No. 2 no hay calculos
+    // No. 2 no hay resultadosLados
 
     void resultados (){ //No. 3 Imprimir
         Pizarra p = new Pizarra();

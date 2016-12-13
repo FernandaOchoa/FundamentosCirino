@@ -6,20 +6,19 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*PruebaHipotenusa.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 25
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 public class PruebaHipotenusa {
     Hipotenusa hipotenusa = new Hipotenusa();
-
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
 

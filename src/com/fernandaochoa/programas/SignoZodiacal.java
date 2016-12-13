@@ -5,14 +5,14 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*SignoZodiacal.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #39
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -20,7 +20,6 @@ import java.io.IOException;
 public class SignoZodiacal {
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
-
     static String mes, dias, año, name;
     static int m, di, a;
 
@@ -37,29 +36,28 @@ public class SignoZodiacal {
     }
 
     public void inicio() {
-        System.out.println("Programa para determinar el signo zodiacal en base al mes y dia de nacimiento");
+        System.out.println("Programa para determinar el signo zodiacal");
+        System.out.println("en base al mes y dia de nacimiento");
     }
 
     public void datos() {
-
         p.setVisible(true);
         name = d.readString("Ingresa tu nombre: ");
-
         p.setVisible(true);
+
         do año = d.readString("Ingresa tu año de nacimiento (2000):");
         while (!isNum(año));
         a = Integer.parseInt(año);
-
         p.setVisible(true);
+
         do mes = d.readString("Ingresa tu mes de nacimiento (1-12):");
         while (!isNum(mes));
         m = Integer.parseInt(mes);
-
         p.setVisible(true);
+
         do dias = d.readString("Ingresa tu dia de nacimiento (1-31):");
         while (!isNum(dias));
         di = Integer.parseInt(dias);
-
     }
 
     public void mostrarMensaje(String signo) {
@@ -75,126 +73,173 @@ public class SignoZodiacal {
         switch (m) {
 
             case 1:
-                //Enero
-                if (di >= 20) {
-                    signoZodiacal.mostrarMensaje("Acuario");
-                    p.ofoto("acuario.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Capricornio");
-                    p.ofoto("capricornio.jpg");
-                }
+                enero(signoZodiacal);
                 break;
             case 2:
-                //Febrero
-                if (di >= 19) {
-                    signoZodiacal.mostrarMensaje("Picis");
-                    p.ofoto("picis.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Acuario");
-                    p.ofoto("acuario.jpg");
-                }
+                febrero(signoZodiacal);
                 break;
             case 3:
-                //Marzo
-                if (di >= 21) {
-                    signoZodiacal.mostrarMensaje("Aries");
-                    p.ofoto("aries.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Picis");
-                    p.ofoto("picis.jpg");
-                }
+                marzo(signoZodiacal);
                 break;
             case 4:
-                //Abril
-                if (di >= 19) {
-                    signoZodiacal.mostrarMensaje("Tauro");
-                    p.ofoto("tauro.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Aries");
-                    p.ofoto("aries.jpg");
-                }
+                abril(signoZodiacal);
                 break;
             case 5:
-                //Mayo
-                if (di >= 21) {
-                    signoZodiacal.mostrarMensaje("Geminis");
-                    p.ofoto("geminis");
-                } else {
-                    signoZodiacal.mostrarMensaje("Tauro");
-                    p.ofoto("tauro");
-                }
+                mayo(signoZodiacal);
                 break;
             case 6:
-                //Junio
-                if (di >= 21) {
-                    signoZodiacal.mostrarMensaje("Cancer");
-                    p.ofoto("cancer.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Geminis");
-                    p.ofoto("geminis.jpg");
-                }
+                junio(signoZodiacal);
                 break;
             case 7:
-                //Julio
-                if (di >= 23) {
-                    signoZodiacal.mostrarMensaje("Leo");
-                    p.ofoto("leo.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Cancer");
-                    p.ofoto("cancer.jpg");
-                }
+                julio(signoZodiacal);
                 break;
             case 8:
-                //Agosto
-                if (di >= 23) {
-                    signoZodiacal.mostrarMensaje("Virgo");
-                    p.ofoto("virgo.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Leo");
-                    p.ofoto("leo.jpg");
-                }
+                agosto(signoZodiacal);
                 break;
-
             case 9:
-                //Septiembre
-                if (di >= 23) {
-                    signoZodiacal.mostrarMensaje("Libra");
-                    p.ofoto("libra.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Virgo");
-                    p.ofoto("virgo.jgp");
-                }
+                septiembre(signoZodiacal);
                 break;
             case 10:
-                //Octubre
-                if (di >= 23) {
-                    signoZodiacal.mostrarMensaje("Escorpio");
-                    p.ofoto("escorpio.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Libra");
-                    p.ofoto("sagitario");
-                }
+                octubre(signoZodiacal);
                 break;
             case 11:
-                //Noviembre
-                if (di >= 22) {
-                    signoZodiacal.mostrarMensaje("Sagitario");
-                    p.ofoto("sagitario.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Escorpio");
-                    p.ofoto("escorpio.jpg");
-                }
+                noviembre(signoZodiacal);
                 break;
             case 12:
-                //Diciembre
-                if (di >= 21) {
-                    signoZodiacal.mostrarMensaje("Capricornio");
-                    p.ofoto("capricornio.jpg");
-                } else {
-                    signoZodiacal.mostrarMensaje("Sagitario");
-                    p.ofoto("sagitario");
-                }
+                diciembre(signoZodiacal);
                 break;
+        }
+    }
+
+    public void enero(SignoZodiacal signoZodiacal){
+        //Enero
+        if (di >= 20) {
+            signoZodiacal.mostrarMensaje("Acuario");
+            p.ofoto("acuario.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Capricornio");
+            p.ofoto("capricornio.jpg");
+        }
+    }
+
+    public void febrero(SignoZodiacal signoZodiacal){
+        //Febrero
+        if (di >= 19) {
+            signoZodiacal.mostrarMensaje("Picis");
+            p.ofoto("picis.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Acuario");
+            p.ofoto("acuario.jpg");
+        }
+    }
+
+    public void marzo(SignoZodiacal signoZodiacal){
+        //Marzo
+        if (di >= 21) {
+            signoZodiacal.mostrarMensaje("Aries");
+            p.ofoto("aries.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Picis");
+            p.ofoto("picis.jpg");
+        }
+    }
+
+    public void abril(SignoZodiacal signoZodiacal){
+        //Abril
+        if (di >= 19) {
+            signoZodiacal.mostrarMensaje("Tauro");
+            p.ofoto("tauro.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Aries");
+            p.ofoto("aries.jpg");
+        }
+    }
+
+    public void mayo(SignoZodiacal signoZodiacal) {
+        //Mayo
+        if (di >= 21) {
+            signoZodiacal.mostrarMensaje("Geminis");
+            p.ofoto("geminis");
+        } else {
+            signoZodiacal.mostrarMensaje("Tauro");
+            p.ofoto("tauro");
+        }
+    }
+
+    public void junio(SignoZodiacal signoZodiacal) {
+        //Junio
+        if (di >= 21) {
+            signoZodiacal.mostrarMensaje("Cancer");
+            p.ofoto("cancer.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Geminis");
+            p.ofoto("geminis.jpg");
+        }
+    }
+
+    public void julio(SignoZodiacal signoZodiacal) {
+        //Julio
+        if (di >= 23) {
+            signoZodiacal.mostrarMensaje("Leo");
+            p.ofoto("leo.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Cancer");
+            p.ofoto("cancer.jpg");
+        }
+    }
+
+    public void agosto(SignoZodiacal signoZodiacal) {
+        //Agosto
+        if (di >= 23) {
+            signoZodiacal.mostrarMensaje("Virgo");
+            p.ofoto("virgo.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Leo");
+            p.ofoto("leo.jpg");
+        }
+    }
+
+    public void septiembre(SignoZodiacal signoZodiacal) {
+        //Septiembre
+        if (di >= 23) {
+            signoZodiacal.mostrarMensaje("Libra");
+            p.ofoto("libra.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Virgo");
+            p.ofoto("virgo.jgp");
+        }
+    }
+
+    public void octubre(SignoZodiacal signoZodiacal) {
+        //Octubre
+        if (di >= 23) {
+            signoZodiacal.mostrarMensaje("Escorpio");
+            p.ofoto("escorpio.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Libra");
+            p.ofoto("sagitario");
+        }
+    }
+
+    public void noviembre(SignoZodiacal signoZodiacal) {
+        //Noviembre
+        if (di >= 22) {
+            signoZodiacal.mostrarMensaje("Sagitario");
+            p.ofoto("sagitario.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Escorpio");
+            p.ofoto("escorpio.jpg");
+        }
+    }
+
+    public void diciembre(SignoZodiacal signoZodiacal) {
+        //Diciembre
+        if (di >= 21) {
+            signoZodiacal.mostrarMensaje("Capricornio");
+            p.ofoto("capricornio.jpg");
+        } else {
+            signoZodiacal.mostrarMensaje("Sagitario");
+            p.ofoto("sagitario");
         }
     }
 
@@ -216,7 +261,5 @@ public class SignoZodiacal {
             }
             System.in.skip(2);
         }
-
-
     }
 }

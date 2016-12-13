@@ -2,18 +2,17 @@ package com.fernandaochoa.programas;
 
 import cstio.Dialog;
 import cstio.Pizarra;
-
 import java.io.IOException;
 import java.util.Scanner;
 
-/*NombreDelArchivo.java
+/*CribaEratostenes.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 49
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -24,7 +23,7 @@ public class CribaEratostenes {
     public static int n;
 
     public void inicio() {
-        System.out.println("Programa para desplegar la calculos de Eratostenes segun un numero dado");
+        System.out.println("Programa para desplegar la resultadosLados de Eratostenes segun un numero dado");
     }
 
     public void calculos(int tamanoArreglo) {
@@ -32,30 +31,24 @@ public class CribaEratostenes {
         boolean arreglo[] = new boolean[tamanoArreglo + 1];
         for (int i = 1; i < tamanoArreglo; i++)
             arreglo[i] = true;
-
         for (int j = 2; j <= tamanoArreglo; j++)
             if (true == arreglo[j])
                 for (int k = 2; k <= (tamanoArreglo) / j; k++)
                     arreglo[k * j] = false;
-
         resultados(arreglo, tamanoArreglo);
     }
 
-
     public void resultados(boolean a[], int tamano) {
-        int count = 0;
 
+        int count = 0;
         for (int i = 2; i <= tamano; i++) {
             if (true == a[i])
                 count++;
         }
-
-        System.out.printf("Los %d numeros que hay en la calculos son: ", count);
+        System.out.printf("Los %d numeros que hay en la resultadosLados son: ", count);
         System.out.printf("entre 1 y %d\n\n", n);
-
         int i = 1;
         for (int n = 1; n <= tamano; n++) {
-
             if (true == a[n]) {
                 System.out.printf("%4d\t", n);
                 i++;
@@ -68,11 +61,16 @@ public class CribaEratostenes {
         System.out.printf("\n");
     }
 
+    public  void datos() {
+        System.out.println("Escribe un numero natural para calcular su criba ");
+        Scanner num = new Scanner(System.in);
+        n = num.nextInt();
+    }
+
     public static void main(String[] args) throws IOException {
         CribaEratostenes cribaEratostenes = new CribaEratostenes();
         String resp = "s";
         Dialog d = new Dialog();
-
 
         cribaEratostenes.inicio();
         while (resp.equals("s") || resp.equals("S")) {
@@ -85,12 +83,4 @@ public class CribaEratostenes {
             System.in.skip(2);
         }
     }
-    public  void datos() {
-        System.out.println("Escribe un numero natural para calcular su criba ");
-
-        Scanner num = new Scanner(System.in);
-        n = num.nextInt();
-    }
-
-
 }

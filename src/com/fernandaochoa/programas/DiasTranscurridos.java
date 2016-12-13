@@ -3,17 +3,16 @@ package com.fernandaochoa.programas;
 import com.fernandaochoa.capsulas.Dias;
 import cstio.Dialog;
 import cstio.Pizarra;
-
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*DiasTranscurridos.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #:38
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -22,11 +21,11 @@ public class DiasTranscurridos {
     Dias dias = new Dias();
     Pizarra p = new Pizarra();
 
+    int diasr, b, dia, mes, año;
+
     public void inicio() {
         System.out.println("Para calcular los dias transcurridos en el año");
     }
-
-    int diasr, b, dia, mes, año;
 
     boolean isNum(String cad) {
         Dialog d = new Dialog();
@@ -34,11 +33,10 @@ public class DiasTranscurridos {
             Double.parseDouble(cad);
             return true;
         } catch (NumberFormatException nfe) {
-            d.display("solo se admiten valores numericos");
+            d.display("Solo se admiten valores numericos");
         }
         return false;
     }
-
 
     public void datos(Dias dias) {
         Dialog d = new Dialog();
@@ -56,9 +54,7 @@ public class DiasTranscurridos {
         while (!isNum(aux));
         dias.setDia((Integer.parseInt(aux)));
 
-
     }
-
 
     public void calculos() {
         año = (int) dias.getAño();
@@ -108,16 +104,12 @@ public class DiasTranscurridos {
             case 12:
                 dia = dia + 334 + b;
                 break;
-
         }
         diasr = (365 + b) - dia;
     }
 
-
     void resultados() {
-
         p.setVisible(true);
-
         p.out("\nHan transucrrido: " + dia + " dias \n");
         p.out("\n para acabar el año faltan " + diasr + " dias\n");
         if (año % 4 == 0) {
@@ -141,5 +133,4 @@ public class DiasTranscurridos {
             System.in.skip(2);
         }
     }
-
 }

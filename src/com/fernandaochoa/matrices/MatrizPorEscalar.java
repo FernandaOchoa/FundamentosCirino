@@ -1,17 +1,16 @@
 package com.fernandaochoa.matrices;
 
-/*NombreDelArchivo.java
+/*MatrizPorEscalar.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 69
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
-//69
 
 import cstio.Dialog;
 import cstio.Pizarra;
@@ -22,10 +21,10 @@ public class MatrizPorEscalar {
     private float datos[][];
     private float totales[][];
     private char operadores[];
+
     private int filas, columnas;
     private float escalar;
     String a;
-
 
     public boolean isNum(String cad) {
         try {
@@ -38,7 +37,7 @@ public class MatrizPorEscalar {
     }
 
     public void inicio() {
-        d.display("Programa para hacer aritmetica con los datos de una matriz");
+        d.display("Programa para hacer aritmetica con los datosLados de una matriz");
     }
 
     public void tamaño() {
@@ -140,7 +139,4 @@ public class MatrizPorEscalar {
         matrix.calculos();
         matrix.resultados();
     }
-
 }
-
-

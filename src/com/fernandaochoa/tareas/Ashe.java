@@ -44,7 +44,7 @@ public class Ashe {
         }
         return false;
     }
-    //Captura de datos
+    //Captura de datosLados
     public  void datos(CapsulaAshe ashe){
 
         //Preparamos interfaz y variables

@@ -6,28 +6,26 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*Permutaciones.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #48
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
 public class Permutaciones {
     Combinaciones combinaciones = new Combinaciones();
-
     Pizarra p = new Pizarra();
+    int cosas, posibles, nf, nkf, resultado;
 
     public void inicio() {
         System.out.println("Para calcular las permutaciones");
     }
-
-    int cosas, posibles, nf, nkf, resultado;
 
     boolean isNum(String cad) {
         Dialog d = new Dialog();
@@ -44,7 +42,6 @@ public class Permutaciones {
         Dialog d = new Dialog();
         String aux;
 
-
         do aux = d.readString("Ingrese el numero de objetos que puedes elegir:");
         while (!isNum(aux));
         c.setCosas((Integer.parseInt(aux)));
@@ -60,17 +57,14 @@ public class Permutaciones {
     }
 
     public void calculos() {
-
         cosas = (int) combinaciones.getCosas();
         posibles = (int) combinaciones.getPosibles();
-
         nf = factorial(cosas);
         nkf = factorial(cosas - posibles);
         resultado = nf / nkf;
     }
 
     void resultados() {
-
         p.setVisible(true);
         p.out("\nExisten un numero de \n");
         p.out(+resultado + " Permutaciones posibles \n");
@@ -92,5 +86,4 @@ public class Permutaciones {
             System.in.skip(2);
         }
     }
-
 }

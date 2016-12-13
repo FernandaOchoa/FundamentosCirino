@@ -2,36 +2,36 @@ package com.fernandaochoa.programas;
 
 import cstio.Dialog;
 import cstio.Pizarra;
+
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*Jardinero.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #:46
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
 public class Jardinero {
     Pizarra p = new Pizarra();
+    int array[] = new int[50];
+    int area, max, valor = 0;
 
     public void inicio() {
         System.out.println("Para calcular el area");
     }
 
-    int array[] = new int[50];
-    int area, max, valor = 0;
-
     public void datos() {
-        p.out("No hay datos, son por default");
+        p.out("No hay datosLados, son por default");
     }
 
     public void calculos() {
-        p.out("No hay calculos");
+        p.out("No hay resultadosLados");
     }
 
     void resultados() {
@@ -62,5 +62,4 @@ public class Jardinero {
             System.in.skip(2);
         }
     }
-
 }

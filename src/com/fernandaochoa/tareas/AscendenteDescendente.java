@@ -4,6 +4,17 @@ import cstio.Dialog;
 import cstio.Pizarra;
 
 import java.io.IOException;
+/*AscendenteDescendente.java
+  Instituto Tecnológico de León
+  Ingeniería en Sistemas Computacionales
+  Fundamentos de Programación.
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
+  Alumno (a): Ramírez Ochoa Fernanda Monserrat
+  Foto Digital del alumno (a)
+  Tarea #: 8
+  Fecha de entrega pactada:_________
+  Fecha de entrega actual:__________
+*/
 
 public class AscendenteDescendente {
     Dialog d = new Dialog();
@@ -117,7 +128,7 @@ public class AscendenteDescendente {
 
         switch (opc) {
             case 1:
-                p.out("datos ingresados\n");
+                p.out("datosLados ingresados\n");
                 for (int i = 0; i < control; i++) {
                     p.out(datos[i] + ", ");
                 }

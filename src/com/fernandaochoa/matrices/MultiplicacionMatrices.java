@@ -2,19 +2,18 @@ package com.fernandaochoa.matrices;
 
 import java.util.Scanner;
 
-/*NombreDelArchivo.java
+/*MultiplicacionMatrices.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: _______
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 public class MultiplicacionMatrices {
-    // Abre clase Multiplicacion
 
     //Si se quiere multiplicar Matrices de distinta dimension
     //solo hay que cambiar los valores de M, N y P
@@ -25,69 +24,50 @@ public class MultiplicacionMatrices {
     private int Matriz2[][] = new int[M][P];
     private int Matriz3[][] = new int[N][P];
 
-    Scanner entrada = new Scanner(System.in);
+    Scanner teclado = new Scanner(System.in);
 
+    public void datos() {
 
-    //Metodo Recibe_Entradas1
-    public void Recibe_Entradas1()
-
-    { // Abre metodo Recibe_Entradas1
-
-        System.out.printf("\nEste programa multiplica una matriz de %d columnas y %d renglones", M, N);
+        System.out.printf("\nMultiplica una matriz de %d columnas y %d renglones", M, N);
         System.out.printf(" con una de %d columnas y %d renglones\n\n", P, M);
         System.out.print("\nAqui se reciben las entradas de la primera matriz ");
         System.out.printf("de %d filas y %d columnas.\n", M, N);
 
-
         for (int i = 0; i < N; i++)
-            for (int j = 0; j < M; j++)
+            for (int j = 0; j < M; j++) {
+                System.out.printf("Introduzca el valor:");
+                System.out.printf(" en el renglon %d y la columna %d: ", i + 1, j + 1);
+                Matriz1[i][j] = teclado.nextInt();
+                Matriz1[i][j] = teclado.nextInt();
+            }
+    }
 
-            { // Abre for
-                System.out.printf("Introduzca el valor de la entrada en el renglon %d  y la columna %d: ", i + 1, j + 1);
-                Matriz1[i][j] = entrada.nextInt();
-            } // Cierra for
-    } // Cierra metodo Recibe_Entradas1
-
-
-    public void Recibe_Entradas2()
-
-    { // Abre metodo Recibe_Entradas2
-
+    public void entradas() {
         System.out.print("\nAqui se reciben las entradas de la segunda matriz ");
         System.out.printf("de  %d  filas y %d columnas", M, P);
 
         for (int i = 0; i < M; i++)
-            for (int j = 0; j < P; j++) { // Abre for
-                System.out.printf("\nIntroduzca el valor en el renglon %d y la columna %d: ", i + 1, j + 1);
-                Matriz2[i][j] = entrada.nextInt();
-            } // Cierra for
+            for (int j = 0; j < P; j++) {
+                System.out.printf("\nIntroduzca el valor: ");
+                System.out.printf("en %d y la columna %d: ", i + 1, j + 1);
+                Matriz2[i][j] = teclado.nextInt();
+            }
+    }
 
-    } // Cierra metodo Recibe_Entradas2
-
-
-    // Metodo Multiplicar
-    public void Multiplicar()
-
-    { // Abre metodo Multiplicar
-
-        for (int k = 0; k < N; k++) { // abre primer ciclo for
-            for (int j = 0; j < P; j++) { // abre el segundo ciclo for
+    public void calculos() {
+        for (int k = 0; k < N; k++) {
+            for (int j = 0; j < P; j++) {
                 for (int i = 0; i < M; i++)
                     Matriz3[k][j] += Matriz1[k][i] * Matriz2[i][j];
-
-            } // Cierra el segundo ciclo for
+            }
         }
+    }
 
-    } // Cierra el metodo Multiplicar
-
-
-    void Imprimir() {  // Abre metodo Imprimir
-        // Aqui se imprimen la dos Matrices y la matriz producto
+    void resultados() {
         int i, j, k;
 
-        System.out.printf("\n\nAQUI SE IMPRIMEN LAS DOS MATRICES Y EL PRODUCTO: \n\n");
-        for (i = 0; i < N; i++) { // abre for que controla numero de renglones
-
+        System.out.printf("\n\nImprime las dos matrices y el producto: \n\n");
+        for (i = 0; i < N; i++) { // numero de renglones
             // Este ciclo imprime la primera matriz
             // No hay ningun problema para imprimir la primera matriz, ya que se
             // trata de un par de ciclos for. Sin embargo se quiere imprimir las
@@ -96,16 +76,15 @@ public class MultiplicacionMatrices {
             // solo que antes de pasar al siguiente renglon, se escriben las entradas
             // correspondientes de la segunda y tercera Matrices.
 
-            for (k = 0; k < M; k++) { // Abre ciclo for
+            for (k = 0; k < M; k++) {
                 System.out.printf("%3d", Matriz1[i][k]);
-                // Se imprime el renglon i de la matriz 1
-            } //Cierra ciclo for
+                //Se imprime el renglon i de la matriz 1
+            }
+            System.out.printf("\t\t"); // separa una matriz de otra
 
-            System.out.printf("\t\t"); // Esta instruccion separa una matriz de otra
+            //imprime la segunda matriz
 
-            // Este ciclo imprime la segunda matriz
-
-            for (j = 0; j < P; j++) { // abre for
+            for (j = 0; j < P; j++) {
                 if (i <= (N - 1)) // El numero de columnas de la segunda matriz puede ser
                     // menor o mayor que el numero de filas de la primera
                     // Si es mayor no pasa nada, pero si es menor se estara
@@ -113,64 +92,50 @@ public class MultiplicacionMatrices {
                     // El caso en el que N > M se trata fuera del ciclo controlado por i
                     // El -1 es debido a que i empieza a correr en cero
 
-                    System.out.printf("%3d", Matriz2[i][j]); // se imprime el renglon i de la matriz 2
+                    System.out.printf("%3d", Matriz2[i][j]);
 
                 else // De lo contrario solo se imprimen 3 espacios en blanco
                     // correspondientes con 3d
 
                     System.out.printf(" ");
-            } // Cierra for
-
-            System.out.printf("\t\t"); // Esta instruccion separa la matriz 2 de la matriz
+            }
+            System.out.printf("\t\t"); //separa la matriz 2 de la matriz
             // producto
 
             // Este es el ciclo que imprime la matriz producto
-            for (j = 0; j < P; j++) { // abre for
+            for (j = 0; j < P; j++) {
                 System.out.printf("%3d", Matriz3[i][j]);
                 // se imprime el renglon i de la matriz producto
-            } // Cierra for
-
+            }
             System.out.printf("\n");
             // Aqui se cambia de renglon
-        } // Cierra for que controla numero de renglones
+        } // Cierra numero de renglones
 
         // Es probable que N > M, por lo cual en el ciclo anterior no se
         // imprimiria la segunda matriz en su totalidad
         // Con el siguiente bloque se imprime lo que falta
 
-        if (M > N) { // Abre if
+        if (M > N) {
             int l = N;
-
-            while (l < M) { // Abre while
+            while (l < M) {
                 for (i = 0; i < M; i++)
                     System.out.printf(" ");
                 System.out.printf("\t\t\t");
                 for (j = 0; j < P; j++)
                     System.out.printf("%3d", Matriz2[l][j]);
-                System.out.printf("\n"); // Aqui se cambia de linea
-                l++; // Se incrementa el numero de linea
-            } // Cierra while
-        } // Cierra if
-    }  // Cierra metodo Imprimir
+                System.out.printf("\n");
+                l++;
+            }
+        }
+    }
 
-    // Abre clase UsaMultiplicacion
+    public static void main(String args[]) {
 
-    public static void main(String args[]) {       // Abre main
+        MultiplicacionMatrices matrices = new MultiplicacionMatrices();
 
-        Matrices miObjeto = new Matrices();
-
-        // Llamada a Recibe_Entradas1()
-        miObjeto.Recibe_Entradas1();
-
-        // Llamada a Recibe_Entradas2()
-        miObjeto.Recibe_Entradas2();
-
-        //Llamada a Multiplicar
-        miObjeto.Multiplicar();
-
-        //Llamada a metodo Imprime
-        miObjeto.Imprimir();
-
-    }       // Cierra main
-}              // Cierra clase UsaMultiplicacion
-
+        matrices.datos();
+        matrices.entradas();
+        matrices.calculos();
+        matrices.resultados();
+    }
+}

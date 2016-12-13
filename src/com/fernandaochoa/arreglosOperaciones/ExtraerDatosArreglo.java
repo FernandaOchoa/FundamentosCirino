@@ -4,19 +4,18 @@ import cstio.Dialog;
 import cstio.Pizarra;
 
 import java.io.IOException;
-/*NombreDelArchivo.java
+/*ExtraerDatosArreglo.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 67
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
-//68
 public class ExtraerDatosArreglo {
     Dialog d = new Dialog();
     private int originales[]=new int[1000], control;
@@ -33,7 +32,7 @@ public class ExtraerDatosArreglo {
     }
 
     public void inicio(){
-        d.display("Programa para extraer datos de un arreglo(datos numericos)");
+        d.display("Programa para extraer datosLados de un arreglo(datosLados numericos)");
     }
 
     public void datos(){
@@ -50,7 +49,7 @@ public class ExtraerDatosArreglo {
             control = i;
         }
         do
-            v = d.readString("Ingresa un rango de datos\n"
+            v = d.readString("Ingresa un rango de datosLados\n"
                     + "primer numero");
         while(!isNum(v));
         uno = Integer.parseInt(v);
@@ -89,7 +88,7 @@ public class ExtraerDatosArreglo {
                 p.out(originales[i]+", ");
             else break;
         }
-        p.out("\nLos datos extraidos son los siguientes\n");
+        p.out("\nLos datosLados extraidos son los siguientes\n");
         if(dos<uno){
             j=dos;
             for(j=dos;j<uno;j++){
@@ -101,9 +100,7 @@ public class ExtraerDatosArreglo {
             for(j=uno;j<dos;j++)
                 p.out(extraidos[j]+", ");
         }
-
     }
-
 
     public static void main(String[] args) throws IOException {
         ExtraerDatosArreglo extraer = new ExtraerDatosArreglo();
@@ -115,13 +112,10 @@ public class ExtraerDatosArreglo {
             extraer.rellenar();
             extraer.calculos();
             extraer.resultados();
-
             String res = extraer.d.readString("Deseas hacer otra extraccion? s/n");
             res = res.toLowerCase();
             resp = res.charAt(0);
             System.in.skip(2);
         }
-
     }
-
 }

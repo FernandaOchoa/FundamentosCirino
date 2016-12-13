@@ -10,14 +10,14 @@ import java.io.InputStream;
 import java.util.Calendar;
 import java.util.Date;
 
-/*NombreDelArchivo.java
+/*Saludo.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #36
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -30,10 +30,10 @@ public class Saludo {
     }
 
     public void datos(){
-        System.out.println("Son datos del sistema");
+        System.out.println("Son datosLados del sistema");
     }
     public void calculos(){
-        System.out.println("No hay calculos");
+        System.out.println("No hay resultadosLados");
     }
 
     public void resultados() throws IOException {
@@ -43,6 +43,7 @@ public class Saludo {
         int hora = (cal.get(Calendar.HOUR_OF_DAY));
         int minutos = (cal.get(Calendar.MINUTE));
         int segundos = (cal.get(Calendar.SECOND));
+
         InputStream in = new FileInputStream("buenosdias.wav");
         AudioStream as = new AudioStream(in);
         InputStream in2 = new FileInputStream("buenastardes.wav");
@@ -79,6 +80,5 @@ public class Saludo {
             resp = d.readString("¿Desea saludar de nuevo? s/n");
             System.in.skip(2);
         }
-
     }
 }

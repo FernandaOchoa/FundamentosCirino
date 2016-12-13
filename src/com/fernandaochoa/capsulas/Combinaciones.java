@@ -1,13 +1,13 @@
 package com.fernandaochoa.capsulas;
 
-/*NombreDelArchivo.java
+/*Combinaciones.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 48.1
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -25,7 +25,6 @@ public class Combinaciones {
         return posibles;
     }
 
-
     public boolean setCosas(int cosas) {
         if (cosas > 0) {
             this.cosas = cosas;
@@ -39,5 +38,4 @@ public class Combinaciones {
             return true;
         } else return false;
     }
-
 }

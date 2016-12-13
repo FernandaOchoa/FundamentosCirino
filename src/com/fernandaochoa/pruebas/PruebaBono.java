@@ -1,13 +1,13 @@
 package com.fernandaochoa.pruebas;
 
-/*NombreDelArchivo.java
+/*PruebaBono.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 35
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
@@ -45,18 +45,15 @@ public class PruebaBono {
     }
 
     void datos(Bono bono) {
-        p.setVisible(true);
         do name = d.readString("Ingrese el Nombre del Empleado:");
         while (name.isEmpty());
         bono.setNombre(name);
 
-        p.setVisible(true);
         do h = d.readString("Ingrese las horas extras trabajadas:");
         while (!isNum(h));
         horasExtra = Integer.parseInt(h);
         bono.setHorasExtra(horasExtra);
 
-        p.setVisible(true);
         do a = d.readString("Ingrese la cantidad de ausencias:");
         while (!isNum(a));
         ausencias = Integer.parseInt(a);
@@ -108,8 +105,6 @@ public class PruebaBono {
 
     public static void main(String[] args) throws IOException {
         PruebaBono pb = new PruebaBono();
-
-
         Pizarra p = new Pizarra();
         Dialog d = new Dialog();
         String resp = "s";
@@ -127,5 +122,3 @@ public class PruebaBono {
         }
     }
 }
-
-

@@ -4,29 +4,26 @@ import cstio.Dialog;
 import cstio.Pizarra;
 
 import java.io.IOException;
-/*NombreDelArchivo.java
+/*Promedio.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
   Días y horario del curso
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio: #44
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
 public class Promedio {
     Pizarra p = new Pizarra();
+    int [] numeros =new int[100];
+    int i=0 ,control,promedio,suma;
 
     public void inicio() {
         System.out.println("Para calcular el promedio de los numeros Reales");
     }
-
-    int [] numeros =new int[100];
-
-    int i=0 ,control,promedio,suma;
-
 
     boolean isNum(String cad) {
         Dialog d = new Dialog();
@@ -42,14 +39,12 @@ public class Promedio {
     public void datos(){
         Dialog d = new Dialog();
         String aux;
-
         int numero=1;
 
         while(numero!=0){
-            do{
-                aux = d.readString("Introduce un valor para promediar,\n"
+            do aux = d.readString("Introduce un valor para promediar,\n"
                         + "para salir introduce 0");
-            }while(!isNum(aux));
+            while(!isNum(aux));
             numero = Integer.parseInt(aux);
             numeros[i]=numero;
             suma = suma + numero;
@@ -58,7 +53,6 @@ public class Promedio {
                 control = control + 1;
             }
         }
-
     }
 
     public void calculos() {
@@ -69,7 +63,7 @@ public class Promedio {
 
         p.setVisible(true);
 
-        p.out("\nEl promedio de los datos " );
+        p.out("\nEl promedio de los datosLados " );
         p.out("\n es "+promedio+"\n");
         p.ofoto("promedio.png");
     }
@@ -89,5 +83,4 @@ public class Promedio {
             System.in.skip(2);
         }
     }
-
 }

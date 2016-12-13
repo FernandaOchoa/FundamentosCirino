@@ -2,21 +2,19 @@ package com.fernandaochoa.arreglosOperaciones;
 
 import cstio.Dialog;
 import cstio.Pizarra;
-
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*InvertirArreglo.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 66
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
-
 public class InvertirArreglo {
     Dialog d = new Dialog();
     private int normal[] = new int[1000], control;
@@ -42,8 +40,6 @@ public class InvertirArreglo {
         String v, res;
         int i = 0, numero = 0;
 
-
-        //if(bandera){
         while (numero != -1) {
             do {
                 v = d.readString("Introduce un valor para el arreglo,\n"
@@ -51,12 +47,9 @@ public class InvertirArreglo {
             } while (!isNum(v));
             numero = Integer.parseInt(v);
             normal[i] = numero;
-            //if(Integer.parseInt(v)==-1)
-            //bandera=false;
             i++;
             control = i;
         }
-        //}
     }
 
     public void rellenar() {
@@ -68,7 +61,6 @@ public class InvertirArreglo {
         for (int i = 0; i < invertido.length; i++) {
             System.out.print(invertido[i]);
         }
-
     }
 
     public void calculos() {
@@ -113,4 +105,3 @@ public class InvertirArreglo {
         }
     }
 }
-

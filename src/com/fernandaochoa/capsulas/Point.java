@@ -1,18 +1,17 @@
 package com.fernandaochoa.capsulas;
 
-/*NombreDelArchivo.java
+/*Point.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: _______
+  Ejercicio #: 11
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 
-//Ejercicio 11
 public class Point {
     private int x,y;
 

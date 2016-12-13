@@ -6,24 +6,22 @@ import cstio.Pizarra;
 
 import java.io.IOException;
 
-/*NombreDelArchivo.java
+/*PruebaTemperaturas.java
   Instituto Tecnológico de León
   Ingeniería en Sistemas Computacionales
   Fundamentos de Programación.
-  Días y horario del curso
+  Lun - Miércoles 10:30/12:10 Viernes 10:30/11:20
   Alumno (a): Ramírez Ochoa Fernanda Monserrat
   Foto Digital del alumno (a)
-  Tarea #: ___6____
+  Ejercicio #: 30
   Fecha de entrega pactada:_________
   Fecha de entrega actual:__________
 */
 public class PruebaTemperatura {
 
     Temperatura temperatura = new Temperatura();
-
     int opc;
     float celsius, fahrenheit, grados, Tfahrenheit, Tcelsius;
-
     Pizarra p = new Pizarra();
     Dialog d = new Dialog();
 
@@ -45,20 +43,29 @@ public class PruebaTemperatura {
     void calculos() {
         switch (opc) {
             case 1:
-                String c;
-                c = d.readString("Escribe los grados Celsius a convertir: ");
-                celsius = Float.parseFloat(c);
-                temperatura.setCelsius(celsius);
-                Tfahrenheit = 1.8f * celsius + 32;
+                celsiusAFahrenheit();
                 break;
             case 2:
-                String c2;
-                c = d.readString("Escribe los grados Fahrenheit a convertir: ");
-                fahrenheit = Float.parseFloat(c);
-                temperatura.setFahrenheit(fahrenheit);
-                Tcelsius = (fahrenheit - 32) / 1.8f;
+                fahrenheitACelsius();
                 break;
         }
+    }
+
+    private void fahrenheitACelsius() {
+        String c;
+        String c2;
+        c = d.readString("Escribe los grados Fahrenheit a convertir: ");
+        fahrenheit = Float.parseFloat(c);
+        temperatura.setFahrenheit(fahrenheit);
+        Tcelsius = (fahrenheit - 32) / 1.8f;
+    }
+
+    private void celsiusAFahrenheit() {
+        String c;
+        c = d.readString("Escribe los grados Celsius a convertir: ");
+        celsius = Float.parseFloat(c);
+        temperatura.setCelsius(celsius);
+        Tfahrenheit = 1.8f * celsius + 32;
     }
 
     //Resultado
